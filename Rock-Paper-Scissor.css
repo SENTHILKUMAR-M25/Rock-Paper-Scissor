@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.score {
+    font-size: 18px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin: 5px;
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.choice {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex: 1 1 30%;
+    margin: 5px;
+}
+
+.choice:hover {
+    background-color: #ddd;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Popup styling */
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .game-container {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .choice {
+        font-size: 14px;
+        padding: 8px 15px;
+        flex: 1 1 40%;
+    }
+
+    .score {
+        font-size: 16px;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    .choice {
+        font-size: 12px;
+        padding: 6px 10px;
+        flex: 1 1 100%;
+    }
+
+    .score {
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}
+
